@@ -8,6 +8,8 @@ import {
   createUserDocumentFromAuth 
 } from '../../helpers/firebase/firebase.helper';
 
+import SignUpForm from '../../components/sign-up-form/sign-up-form.component';
+
 const SignIn = () => {
   // Redirect to Google Login Provider Page
   // Handle redirect to external site with firebase/auth library
@@ -33,7 +35,8 @@ const SignIn = () => {
     <div>
       <h1>Sign In Page</h1>
       <button onClick={logGoogleUserViaPopup}>Sign in with Google Popup</button>
-      <button onClick={signInWithGoogleRedirect}>Sign in with Google Redirect</button>
+      <SignUpForm/>
+      {/* <button onClick={signInWithGoogleRedirect}>Sign in with Google Redirect</button> */}
     </div>
   );
 }
