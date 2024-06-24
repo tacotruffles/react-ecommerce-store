@@ -9,7 +9,7 @@ import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth, 
 } from "../../helpers/firebase/firebase.helper";
-import { Form } from "react-router-dom";
+
 
 const defaultFormFields = {
   displayName: '',
@@ -59,8 +59,8 @@ const SignUpForm = () => {
 
   return (
     <div className="sign-up-container">
-      <h2>Don't have an account?</h2>
-      <span>Sign up with your email and your password</span>
+      <h2>I do not have an account</h2>
+      <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         {/* <label>Display Name</label>
         <input type='text' required onChange={handleChange} name='displayName' value={displayName} /> */}
@@ -73,7 +73,7 @@ const SignUpForm = () => {
         <FormInput label='Confirm Password' type='password' required onChange={handleChange} name='confirmPassword' value={confirmPassword} />
 
         <Button type='submit'>Sign Up</Button>
-        <Button type='submit' buttonType='google'>Google Sign In</Button>
+        {/* <Button type='submit' buttonType='google'>Google Sign In</Button> */}
       </form>
     </div>
   );
